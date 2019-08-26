@@ -5,7 +5,24 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1>Donut Users</h1>
     <p>Welcome <%= title %></p>
+    <ul class="right">
+        <li>
+        <% if (user) { %>
+          <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+        <% } else { %>
+          <a href="/auth/google"><i class="material-icons left"></i>Login</a>
+        <% } %>
+        </li>
+      </ul>
   </body>
 </html>
+<a href="" class="brand-logo left">Donut Journalists of the World</a>
+
+<% if (user) { %>
+    <div class="card-action">
+      <a href="/">Add Donut</a>
+    </div>
+<%}%> 
+
