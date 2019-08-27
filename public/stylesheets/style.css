@@ -4,5 +4,12 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: purple;
+}
+
+#search-row form {
+  padding-top: 20px;
+}
+.brand-log {
+  margin-left: 15wpx;
 }

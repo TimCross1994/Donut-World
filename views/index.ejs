@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Donut Users</h1>
-    <p>Welcome <%= title %></p>
-    <ul class="right">
-        <li>
-        <% if (user) { %>
-          <a href="/logout"><i class="material-icons left"></i>Log Out</a>
-        <% } else { %>
-          <a href="/auth/google"><i class="material-icons left"></i>Login</a>
-        <% } %>
-        </li>
-      </ul>
-  </body>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="" class="brand-logo left">Donut Journalists</h1></a>
+        <ul class="right">
+          <li>
+            <% if (user) { %>
+            <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+            <% } else { %>
+            <a href="/auth/google"><i class="material-icons left"></i>Login</a>
+            <% } %>
+          </li>
+        </ul>
+      </div>
+      </nav>
+      </div>
+</body>
+
 </html>
-<a href="" class="brand-logo left">Donut Journalists of the World</a>
 
 <% if (user) { %>
-    <div class="card-action">
-      <a href="/">Add Donut</a>
-    </div>
+<div class="card-action">
+  <a href="/">Add Donut</a>
+</div>
 <%}%> 
-
