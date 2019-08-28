@@ -1,4 +1,4 @@
-var Donut = require("../models/");
+var Donut = require("../models/profile");
 
 module.exports = {
     create
