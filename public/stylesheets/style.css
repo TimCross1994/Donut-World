@@ -2,14 +2,26 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  display: flex;
+}
 
 a {
-  color: purple;
+  color: blue;
+  text-decoration: none;
+  padding: 20px;
 }
 
 #search-row form {
   padding-top: 20px;
 }
 .brand-log {
-  margin-left: 15wpx;
+  margin-left: 15px;
+}
+.frontPage {
+  display: flex;
 }

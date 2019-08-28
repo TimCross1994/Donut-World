@@ -1,6 +1,9 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-var Eater = require('../models/donuts');
+var Eater = require('../models/eater');
+
+
+
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
@@ -38,4 +41,4 @@ passport.deserializeUser(function(id, done) {
     Eater.findById(id, function(err, eater) {
       done(err, eater);
     });
-  });
+  });''

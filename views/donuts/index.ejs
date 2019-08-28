@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<html lang="en">
+
+  <head>
+    <title>Donut Journalists</title>
+  </head>
+  <body>
+    <thead>
+      <tr>
+        <th>Eater: </th>
+        <th>Donut Eaten:</th>
+        <th>Eaten On:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% donuts.forEach(function(d) { %>
+        <tr>
+          <td><%= d.photo %></td>
+          <td><%= d.name %></td>
+          <td><%= d.eaten %></td>
+          <td><a href="/donuts/<%= d._id %>">Donuts</a></td>
+        </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
+<%- include('../partials/footer') %>
