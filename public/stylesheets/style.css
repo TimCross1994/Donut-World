@@ -1,9 +1,11 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 nav{
   list-style-type: none;
+  color: black;
   margin: 0;
   padding: 0;
   justify-content: flex-end;
@@ -11,7 +13,9 @@ nav{
 }
 
 a {
-  color: blue;
+  background-color: blue; 
+  color: white;
+  width: 100vw;
   text-decoration: none;
   padding: 20px;
 }

@@ -1,5 +1,5 @@
 const Donuts = require("../models/donut");
-
+const Eater = require("../models/eater")
 module.exports = {
   index,
   create,
@@ -9,8 +9,8 @@ module.exports = {
 
 
 function show(req, res) {
-  Donuts.findById(req.params.id, function(err, donuts) {
-    res.render("/profile", {donuts})
+  Eater.findById(req.params.id, function(err, eater) {
+    res.render("donuts/profile", {eater})
   
   })
 }
@@ -31,12 +31,20 @@ function newDount(req,res) {
 }
 
 function create(req, res) {
-  var donut = new Donuts(req.body)
-  console.log(donut);
-  donut.save(function(err) {
-    console.log(donut)
-      if (err) return res.redirect("/new");
-      res.redirect('/');
-  })}
+  Eater.findById(req.user._id, function(err, user) {
+    var donut = new Donuts(req.body)
+    user.donuts.push(donut)
+    user.save(function(err) {
+      console.log(donut);
+      donut.save(function(err) {
+        console.log(donut)
+          if (err) return res.redirect("/new");
+          res.redirect('/');
+      }) 
+    })
+  })
+};
+    
+  
 
 

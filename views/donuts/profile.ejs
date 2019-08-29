@@ -1,28 +1,31 @@
 <html lang="en">
 
-  <head>
-    <title>Tim's Donuts</title>
-  </head>
-  <body>
-    <thead>
+<head>
+  <title>Tim's Donuts</title>
+</head>
+
+<body>
+  <h1>Your Donuts</h1>
+  <ul>
+    <% eater.donuts.forEach(function(d) { %>
+    <li>
       <tr>
-        <th>Donut Eaten</th>
-        <th>Eaten On:</th>
-        <th>Address:</th>
-        <th>Your Experience</th>
+        <td>Name of Donut: <%= d.name %></td>
+        <button type="submit">X</button>
+        <br/>
+        <td>Eaten On: <%= d.eaten %></td>
+        <button type="submit">X</button>
+        <br/>
+        <td >Your Donut Thoughts: <%= d.entry %></td>
+        <button type="submit">X</button>
+        <br/>
       </tr>
-    </thead>
-    <tbody>
-      <% donuts.forEach(function(d) { %>
-        <tr>
-          <td><%= d.name %></td>
-          <td><%= d.eaten %></td>
-          <td><%= d.where %></td>
-          <td><%= d.entry %></td>
-          <td><a href="/donuts/<%= d._id %>">Donuts</a></td>
-        </tr>
-        <% }); %>
-    </tbody>
-  </table>
+      <br/>
+    </li>
+    <% }); %>
+  </ul>
+  <a href="/">World of Donuts</a>
+  </tbody>
 </body>
+
 </html>

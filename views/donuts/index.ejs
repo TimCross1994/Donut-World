@@ -3,26 +3,16 @@
 
   <head>
     <title>Donut Journalists</title>
-  </head>
-  <body>
-    <thead>
+    <% donuts.forEach(function(d) { %>
       <tr>
-        <th>Eater: </th>
-        <th>Donut Eaten:</th>
-        <th>Eaten On:</th>
+        <td>Name of Donut: <%= d.name %></td>
+        <td>Eaten On: <%= d.eaten %></td>
       </tr>
-    </thead>
-    <tbody>
-      <% donuts.forEach(function(d) { %>
-        <tr>
-          <td><%= d.photo %></td>
-          <td><%= d.name %></td>
-          <td><%= d.eaten %></td>
-          <td><a href="/donuts/<%= d._id %>">Donuts</a></td>
-        </tr>
-        <% }); %>
+    <br />
+      <% }); %>
     </tbody>
   </table>
+</head>
 </body>
 </html>
-<%- include('../partials/footer') %>
+<!-- <%- include('../partials/footer') %> -->
