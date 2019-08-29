@@ -8,7 +8,8 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, cb) {
-    Eater.findOne({ "googleId" : profile.id }, function(err, eater) {
+    console.log('lskjenargjaerngiaergoaergoaeurngiouearhgiuaehrgiaerhbgiaehgieayhbgaeiyrebhgiyaerg')
+    Eater.fineOne({ googleId: profile.id }, function(err, eater) {
       if (err) return cb(err);
       if (eater) {
         return cb(null, eater);
@@ -39,4 +40,4 @@ passport.deserializeUser(function(id, done) {
     Eater.findById(id, function(err, eater) {
       done(err, eater);
     });
-  });''
+});''

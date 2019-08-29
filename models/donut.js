@@ -13,4 +13,4 @@ var donutSchema = new Schema({
     ref: "Eater"
   }
 });
-module.exports= mongoose.model("Donuts", donutSchema)
+module.exports= mongoose.model("Donut", donutSchema)

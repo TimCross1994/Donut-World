@@ -4,7 +4,8 @@ var donutsCtrl = require("../controllers/donuts")
 
 
 router.get('/', donutsCtrl.index);
-router.get("/new", donutsCtrl.newDount);
+router.get('/new', donutsCtrl.newDount);
+router.get('/:id', donutsCtrl.show)
 router.post('/', donutsCtrl.create)
 
 
