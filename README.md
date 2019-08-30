@@ -1,2 +1,6 @@
-<h1 align="center"> Donut-World</h1>
-<p>This is an application where users can journal and share with other users the delcious donuts that they have eaten around the world.</p>
+<h1 align="center"> Donut-World-app</h1>
+
+<p>This application allows users to journal all of the delicious donuts that they have eaten all over the world. Each user has access to their own personal profile page where they can see all of the donuts that they have eaten. </p
+  
+
+
