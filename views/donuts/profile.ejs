@@ -1,31 +1,48 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang='en'>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tim's Donuts</title>
 </head>
+<a href="/">World of Donuts</a>
+<a href="/new">Add Another Donut</a>
 
 <body>
   <h1>Your Donuts</h1>
-  <ul>
-    <% eater.donuts.forEach(function(d) { %>
-    <li>
+  <table>
+    <tbody>
+      <% if(eater){ %>
+
+      <% eater.donuts.forEach(function(d) { %>
+
       <tr>
-        <td>Name of Donut: <%= d.name %></td>
-        <button type="submit">X</button>
-        <br/>
-        <td>Eaten On: <%= d.eaten %></td>
-        <button type="submit">X</button>
-        <br/>
-        <td >Your Donut Thoughts: <%= d.entry %></td>
-        <button type="submit">X</button>
-        <br/>
+        <!-- <td>That Donut Photo: <%= d.photo %> -->
+        <td>Name of Donut: <%= d.name %>
+        <td>Eaten On: <%= d.eaten %>
+        <td><%= d.entry %>
+          <form action="/donuts/<%= d._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+            <button><a href='/donuts/<%= d._id %>/edit'>edit</a></button>
+          </form>
+        </td>
+
+        <form action="/donuts/<%= d._id %>?_method=PUT" method="POST">
+         </form>
       </tr>
-      <br/>
-    </li>
-    <% }); %>
-  </ul>
-  <a href="/">World of Donuts</a>
-  </tbody>
+
+      <% }); %>
+      <form>
+
+
+      </form>
+      <% } else { %>
+      <h1>please login to continue</h1>
+      <% } %>
+    </tbody>
+  </table>
 </body>
 
 </html>

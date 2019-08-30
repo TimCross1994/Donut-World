@@ -4,8 +4,31 @@ module.exports = {
   index,
   create,
   show,
-  newDount
+  newDount,
+  delete: deleteDonut,
+  update,
+  edit
 };
+
+function edit(req, res) {
+  Donuts.findById(req.params.id)
+  .populate('Eater')
+  .exec( function(e, donut){
+    res.render('donuts/edit', {
+      donut,
+    })
+  })
+}
+
+function update(req,res) {
+  Donuts.findByIdAndUpdate(
+      req.params.id,
+      req.body, {new:true},
+      (err, donut) => {
+          if (err) return res.redirect('back');
+          res.redirect('/');
+      }
+)}
 
 
 function show(req, res) {
@@ -44,6 +67,15 @@ function create(req, res) {
     })
   })
 };
+
+function deleteDonut(req,res){    
+  console.log("delete function isbeing hit")
+  Donuts.findByIdAndDelete(req.params.id, function(err, donut) {
+
+      res.redirect(`/profile/${req.user._id}`);
+  })
+}
+
     
   
 
