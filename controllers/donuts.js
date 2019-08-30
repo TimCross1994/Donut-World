@@ -39,7 +39,7 @@ function show(req, res) {
 }
 function index(req, res, next) {
   Donuts.find({}, function(err, donuts) {
-
+    
     res.render('donuts/index', { 
       title: 'Donut Journalists',
       user: req.user,

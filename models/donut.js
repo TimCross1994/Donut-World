@@ -2,6 +2,9 @@ var mongoose = require("mongoose")
 var Schema = mongoose.Schema;
 
 var donutSchema = new Schema({
+  image: {
+    type: String
+  },
   name: {
   type: String
   },
@@ -13,5 +16,6 @@ var donutSchema = new Schema({
     ref: "Eater"
   }
 });
+
 module.exports= mongoose.model("Donut", donutSchema)
 //test

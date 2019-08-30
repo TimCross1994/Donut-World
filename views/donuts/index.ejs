@@ -1,14 +1,16 @@
 <%- include('../partials/header') %>
-<html lang="en">
-
   <head>
     <title>Donut Journalists</title>
     <% donuts.forEach(function(d) { %>
       <tr>
-        <td>Name of Donut: <%= d.name %></td>
+        <td><%= d.name %></td>
+      </br>
+          <img src= '<%= d.image %>' height="150" width="150"/>
+      </br>
         <td>Eaten On: <%= d.eaten %></td>
       </tr>
-    <br />
+    </br>
+  </br>
       <% }); %>
     </tbody>
   </table>

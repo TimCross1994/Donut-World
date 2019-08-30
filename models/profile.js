@@ -3,7 +3,10 @@ var Schema = mongoose.Schema;
 
 var profileSchema = new Schema({
   name: {
-  type: String
+    type: String
+    },
+  image: {
+    type: String
   },
   eaten: {
     type: Date
