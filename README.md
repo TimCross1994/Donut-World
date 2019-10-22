@@ -2,7 +2,8 @@
 
 <p>This application is a way to connect and share different donuts you have eaten in and around your area. With a simple user interface, you can add photos, share locations, and talk about your experience eating a certain kind of donut. </p>
 
-Technologies Used
+<h1>Technologies Used</h1>
+
 Express.JS, HTML, CSS, JavaScript
 
 Home Page 
