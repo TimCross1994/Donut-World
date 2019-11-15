@@ -1,6 +1,6 @@
 var router = require('express').Router();
 var passport = require('passport');
-
+//This important
 
 router.get('/auth/google', passport.authenticate(
   'google',
