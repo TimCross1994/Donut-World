@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("https://i.imgur.com/ysTijaR.jpg")
   
 }
 nav{
@@ -13,7 +14,6 @@ nav{
 }
 
 a {
-  background-color: blue; 
   color: white;
   width: 100vw;
   text-decoration: none;
@@ -21,6 +21,24 @@ a {
 }
 
 .nav-profile {
-  color: blue;
+  background-color: blue;
+  color: white;
 }
-
+.nav-new {
+  background-color: blue;
+  color: white;
+}
+.nav-index {
+  background-color: blue;
+  color: white;
+}
+.edit {
+  background-color: black;
+  border-radius: 10%;
+  color: black;
+}
+.delete{
+  background-color: black;
+  border-radius: 10%;
+  color: white;
+}

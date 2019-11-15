@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,7 +7,6 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Tim's Donuts</title>
 </head>
-
 <body>
   <nav class="nav-profile">
     <a href="/" >World of Donuts</a>
@@ -29,8 +29,8 @@
               <td>Your Experience: <%= d.entry %></td>
           </br>
               <form action="/donuts/<%= d._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
-                <button class = "edit" ><a href='/donuts/<%= d._id %>/edit'>edit</a></button>
+                <button class="delete"type="submit">Delete</button>
+                <button class="edit" ><a href='/donuts/<%= d._id %>/edit'>edit</a></button>
               </form>
               
               <form action="/donuts/<%= d._id %>?_method=PUT" method="POST">
