@@ -1,23 +1,39 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <nav>
 <a href="/" >World of Donuts</a>
-<form id="new-form" action="/" method="POST">
-</br>
-        <label>Donut Picture </label>
-        <input type="text" name = "image"  placeholder = "paste a donut photo">
+<a href="/logout"><i class="material-icons left"></i>Log Out</a>
+
+    </nav>
+        <form id="new-form" action="/" method="POST">
         </br>
-        <label>Donut name :</label> 
-        <input type="string" name = "name">
-        </br>
-        <label>Eaten On: </label>  
-        <input type = "date" name = "eaten">
-        </br>  
-        <label>Address:</label>
-        <input type="string" name="where">
-        </br>
-        <label>Your Experience</label>
-        <input type="string" name="entry">
-        </br>
-        <input type="submit" value="Add Donut">
-    </form>
-    </html>
-    <%- include('../partials/footer') %>
+                <label>Donut Picture </label>
+                <input type="text" name = "image"  placeholder = "paste a donut photo">
+                </br>
+                <label>Donut name :</label> 
+                <input type="string" name = "name">
+                </br>
+                <label>Eaten On: </label>  
+                <input type = "date" name = "eaten">
+                </br>  
+                <label>Address:</label>
+                <input type="string" name="where">
+                </br>
+                <label>Your Experience</label>
+                <input type="string" name="entry">
+                </br>
+                <input type="submit" value="Add Donut">
+            </form>
+</body>
+</html>
+
+    
+

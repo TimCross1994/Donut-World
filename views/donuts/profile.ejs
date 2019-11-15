@@ -3,12 +3,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Tim's Donuts</title>
 </head>
-<a href="/" >World of Donuts</a>
-<a href="/new">Add Another Donut</a>
 
 <body>
+  <nav class="nav-profile">
+    <a href="/" >World of Donuts</a>
+    <a href="/new">Add Another Donut</a>
+    <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+</nav>
   <h1>Your Donuts</h1>
     <tbody>
         <% if(eater){ %>
